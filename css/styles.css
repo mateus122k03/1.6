@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, black;
+    background-color: black;
+    background-image: url('https://img.pikbest.com/backgrounds/20190613/gif-dreamy-romantic-love-gradient-light-dot-dynamic-background_2848239.jpg!f305cw');
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.neon-box {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    margin: 50px auto;
+    width: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+.neon-box h1, .neon-box p {
+    margin: 0;
+}
+
+.neon-box:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(128, 0, 128, 1);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes heart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/white-linen.png');
+    z-index: -1;
+    animation: heart 2s infinite;
+}
+
